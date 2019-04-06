@@ -13,6 +13,10 @@ compilador arrojara malos resultados, ya que al ser dependientes estas
 clases, a veces podrán generar errores
 lógicos.*
 
+## 2\. Haz un diagrama UML donde se muestre la relación de herencia entre las  clases Figura, Recangulo y Circulo como vimos en clase.
+
+## 3\. ¿Indica cuales son las clases base y las derivadas.
+
 ## 4\. ¿Que es herencia simple y herencia múltiple? ¿En c\# se puede hacer herencia múltiple?
 
 ***Simple:** Indica que se pueden definir nuevas clases solamente a
