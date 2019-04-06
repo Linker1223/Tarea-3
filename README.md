@@ -25,6 +25,15 @@ dos o más clases iniciales.*
 simple.*
 
 ## Escribe el programa de Figura como vimos en clase, donde agregues varios tipos de figuras a una lista y recorre la lista llamando a un método de las figuras, además:
+
+*5.1 Se sobrecarguen los constructores y se acceda a los constructores
+de la clase base.*
+
+*5.2 Explica para que nos sirve la palabra base.*
+
+*5.3 Haz el método Dibuja() que sea virtual y redefinelo en solo una de
+las clases derivadas.*
+
 ``` 
 using System; 
 using System.Collections.Generic;
@@ -93,6 +102,21 @@ namespace Figura2
         Console.WriteLine("Se dibuja un Rectangulo en {0} de color {1}", position, fill);
     }
   }
+  //Figura Agregada
+  class Triangulo : Figura
+  {
+    public Triangulo(Vector2d pos):base(pos)
+    {
+    }
+    public Triangulo ():base()
+    {
+    }
+
+    public override void Dibuja() 
+    {
+        Console.WriteLine("Se dibuja un Triangulo en {0} de color {1}", position, fill);
+    }
+  }
   class Program
   {
       static void Main(string[] args)
@@ -100,7 +124,8 @@ namespace Figura2
   
           List<Figura> figuras = new List<Figura>();
           figuras.Add(new Circulo());
-          figuras.Add(new Rectangulo(new Vector2d(200,200) ));
+          figuras.Add(new Rectangulo(new Vector2d(200,200)));
+          figuras.Add(new Triangulo(new Vector2d(120,150)));
           foreach(Figura f in figuras)
           f.Dibuja();
          
@@ -108,10 +133,3 @@ namespace Figura2
   }
 }
 ```
-*5.1 Se sobrecarguen los constructores y se acceda a los constructores
-de la clase base.*
-
-*5.2 Explica para que nos sirve la palabra base.*
-
-*5.3 Haz el método Dibuja() que sea virtual y redefinelo en solo una de
-las clases derivadas.*
